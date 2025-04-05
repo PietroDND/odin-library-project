@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liber - Book Tracker App</title>
+    <link rel="shortcut icon" href="assets/imgs/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <div class="container">
+        <!--    TOP BAR START -->
+        <header class="top-bar">
+            <nav class="nav-bar">
+                <a href="#" class="logo">
+                    <img src="assets/imgs/logo.png" alt="Liber Logo">
+                    <span>.Liber</span>
+                </a>
+                <ul class="nav-links">
+                    <li class="nav-link"><a class="active" href="#">Bookshelf</a></li>
+                    <li class="nav-link"><a href="#">Store</a></li>
+                    <li class="nav-link"><a href="#">Settings</a></li>
+                </ul>
+            </nav>
+            <div class="right">
+                <span class="material-symbols-rounded msg-icon">mail</span>
+                <span class="material-symbols-rounded noti-icon">notifications</span>
+                <div class="user-profile">
+                    <div class="user-picture">
+                        <img src="assets/imgs/user.jpg" alt="User Avatar">
+                    </div>
+                    <div class="user-msg">
+                        Hi, <span class="user-name">Amelia!</span>
+                        <div class="badge danger">Free</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <aside class="sidebar">
+            <div class="filters">
+                <div class="filter-card" id="filter-all">
+                    <div>
+                        <span class="material-symbols-rounded filter-icon">book</span>
+                        <span class="filter-number" id="filter-number">67</span>
+                    </div>
+                    <span>All</span>
+                </div>
+                <div class="filter-card" id="filter-new">
+                    <div>
+                        <span class="material-symbols-rounded filter-icon">new_releases</span>
+                        <span class="filter-number" id="filter-number">7</span>
+                    </div>
+                    <span>New</span>
+                </div>
+                <div class="filter-card" id="filter-wishlist">
+                    <div>
+                        <span class="material-symbols-rounded filter-icon">bookmark</span>
+                        <span class="filter-number" id="filter-number"></span>
+                    </div>
+                    <span>Wishlist</span>
+                </div>
+                <div class="filter-card" id="filter-favourites">
+                    <div>
+                        <span class="material-symbols-rounded filter-icon">star</span>
+                        <span class="filter-number" id="filter-number">4</span>
+                    </div>
+                    <span>Favourites</span>
+                </div>
+                <div class="filter-card" id="filter-analytics">
+                    <div>
+                        <span class="material-symbols-rounded filter-icon">analytics</span>
+                    </div>
+                    <span>Analytics</span>
+                </div>
+                <div class="filter-card" id="filter-all">
+                    <div>
+                        <span class="material-symbols-rounded filter-icon">dictionary</span>
+                        <span class="filter-number" id="filter-number">67</span>
+                    </div>
+                    <span>Quotes</span>
+                </div>
+            </div>
+        </aside>
+        <main>
+            <section class="library">
+                <dialog class="add-form" id="add-book-modal">
+                    <form>
+                        <h3>Add a new book</h3>
+                        <p>
+                            <label for="book-title">Book title</label>
+                            <input id="book-title" type="text">
+                            <label for="author-name">Author name</label>
+                            <input id="author-name" type="text">
+                            <label for="page-number">Number of pages</label>
+                            <input id="page-number" type="number">
+                            <label for="cover-url">Cover image URL</label>
+                            <input id="cover-url" type="url">
+                            <div class="read-check">
+                                <label for="read-status">Have you already read the book?</label>
+                                <input id="read-status" type="checkbox">
+                            </div>
+                        </p>
+                        <div class="form-commands">
+                            <button value="cancel" formmethod="dialog">Cancel</button>
+                            <button id="add-btn" value="default">Confirm</button>
+                         </div>
+                    </form>
+                  </dialog>
+                <div class="header">
+                    <span id="open-modal-btn" class="material-symbols-rounded">add</span>
+                    <h2>My Library</h2>
+                </div>
+                <div class="library-container" id="library-container">
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="assets/js/index.js"></script>
+</body>
+</html>

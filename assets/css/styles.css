@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #7bcaff;
+    --color-primary-variant: #2284ec;
+    --color-danger: rgb(255, 87, 9);
+    --color-success: #4CAF50;
+    --color-warning: #F44336;
+    --color-white: #fff;
+    --color-new: #FF8F00;
+    --color-box: rgb(243, 243, 243);
+    --color-info-dark: #555555;
+    --color-info-light: #dce1eb;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-dark-variant: #677483;
+    --color-shadow: rgba(0, 0, 0, 0.409);
+    --body-color: #d9d8e0;
+    --background-color: #ffffff;
+    --border-radius-1: 15px;
+    --border-radius-2: 5px;
+    --border-radius-circle: 50%;
+    --box-shadow: 0rem 2rem 4rem var(--color-shadow);
+}
+
+.danger {
+    background-color: var(--color-danger);
+}
+
+html {
+    font-family: "Lato", sans-serif;
+}
+
+.material-symbols-rounded {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+body {
+    background-color: var(--body-color);
+    width: 100vw;
+    height: 100vh;
+    padding: 20px;
+}
+
+a {
+    color: black;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    background-color: var(--background-color);
+    border-radius: var(--border-radius-1);
+    display: grid;
+    grid-template-columns: 18rem auto;
+    grid-template-rows:min-content;
+}
+
+.top-bar {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    gap: 12rem;
+}
+
+.nav-bar .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-bar .logo img {
+    width: 2.3rem;
+}
+
+.nav-bar .logo span {
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--color-dark);
+}
+
+.nav-bar .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    font-size: 1.2rem;
+}
+
+.nav-bar .nav-links .nav-link a{
+    color: var(--color-info-dark);
+}
+
+.nav-bar .nav-links .nav-link a.active {
+    color: var(--color-primary-variant);
+}
+
+.top-bar .user-profile .user-picture {
+    width: 2.3rem;
+    aspect-ratio: 1 / 1;
+    border-radius: var(--border-radius-circle);
+    overflow: hidden;
+}
+
+.top-bar .right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.top-bar .right .msg-icon,
+.top-bar .right .noti-icon {
+    color: var(--color-dark);
+    cursor: pointer;
+}
+
+.top-bar .right .user-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.badge {
+    color: white;
+    border-radius: var(--border-radius-1);
+    width: fit-content;
+    padding: 0.1rem 0.5rem;
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+    cursor: pointer;
+}
+
+/* SIDEBAR */
+.sidebar {
+    margin-right: 1.5rem;
+    color: var(--color-dark);
+}
+
+.sidebar .filters {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+}
+
+.sidebar .filters .filter-card {
+    background-color: var(--color-box);
+    border-radius: var(--border-radius-1);
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.sidebar .filters .filter-card > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.sidebar .filters .filter-card .filter-icon {
+    color: var(--color-white);
+    background-color: var(--color-primary-variant);
+    width: fit-content;
+    padding: 8px;
+    border-radius: var(--border-radius-circle);
+}
+
+.sidebar .filters .filter-card .filter-number {
+    font-weight: 800;
+}
+
+/* MAIN */
+
+main {
+    color: var(--color-dark);
+    background-color: var(--color-box);
+    border-radius: var(--border-radius-1);
+    width: 100%;
+    overflow: scroll;
+}
+
+main .library {
+    height: 90%;
+    padding: 1.5rem;
+}
+
+main .library .add-form {
+    padding: 1.5rem;
+    margin: auto;
+    border-radius: var(--border-radius-1);
+}
+
+main .library .add-form form h3 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+main .library .add-form form p{
+    display: flex;
+    flex-direction: column;
+}
+
+main .library .add-form form p label {
+    margin-bottom: 0.5rem;
+}
+
+main .library .add-form form p input {
+    background-color: var(--color-box);
+    width: 40vw;
+    height: 2rem;
+    padding: 1rem;
+    border-radius: var(--border-radius-1);
+    margin-bottom: 2rem;
+}
+
+main .library .add-form form .read-check {
+    margin-bottom: 2rem;
+}
+
+main .library .add-form form .read-check label {
+    margin-right: 0.5rem;
+}
+
+main .library .add-form form .form-commands {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+main .library .add-form form button {
+    background-color: var(--color-primary-variant);
+    color: var(--color-white);
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius-1);
+    width: 40%;
+    cursor: pointer;
+}
+
+main .library .header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+main .library .header span {
+    background-color: var(--color-primary-variant);
+    color: var(--color-white);
+    padding: 0.3rem;
+    border-radius: var(--border-radius-circle);
+    cursor: pointer;
+}
+
+main .library .library-container {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+}
+
+main .library .library-container .book-card {
+    width: 200px;
+    cursor: pointer;
+}
+
+main .library .library-container .book-cover {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 0.5rem;
+    border-radius: var(--border-radius-1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+main .library .library-container .book-cover:hover {
+    transform: scale(1.05);
+}
+
+main .library .library-container .book-cover .delete-btn {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+    padding: 0.5rem;
+    border-radius: var(--border-radius-2);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+main .library .library-container .book-cover:hover .delete-btn {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+main .library .library-container .book-card .book-info {
+    position: relative;
+}
+
+main .library .library-container .book-card .author-name {
+    width: 70%;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--color-dark-variant);
+    margin-bottom: 0.3rem;
+}
+
+main .library .library-container .book-card .book-title {
+    width: 60%;
+    color: black;
+    font-size: 1.;
+    margin-bottom: 0.3rem;
+}
+
+main .library .library-container .book-card .reading-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+main .library .library-container .book-card .reading-info .read {
+    background-color: var(--color-success);
+}
+
+main .library .library-container .book-card .reading-info .read::after {
+    content: "Read";
+}
+
+main .library .library-container .book-card .reading-info .not-read {
+    background-color: var(--color-warning);
+}
+
+main .library .library-container .book-card .reading-info .not-read::after {
+    content: "Not Read";
+}
+
+main .library .library-container .book-card .reading-info .read-status{
+    color: var(--color-white);
+    margin-top: 1rem;
+    cursor: inherit;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+main .library .library-container .book-card .reading-info .read-status-msg {
+    position: absolute;
+    top:0;
+    right: 0;
+    font-size: 0.6rem;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 1000px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .top-bar {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .top-bar .nav-links {
+        display: none;
+    }
+
+    .sidebar {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    main .library-container {
+        padding: 0 !important;
+        justify-content: center;
+    }
+
+    main .library .library-container .book-cover .delete-btn {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .book-card {
+        width: 100px !important;
+    }
+
+    .book-cover {
+        height: auto !important;
+    }
+
+    .book-cover .delete-btn {
+        padding: 0.5rem !important;
+        margin: 0.5rem !important;
+    }
+
+    .book-cover .delete-btn span {
+        font-size: 1.2rem;
+    }
+
+    .reading-info {
+        flex-direction: column;
+        align-items: start !important;
+    }
+
+    .reading-info .pages {
+        margin-bottom: 0.5rem;
+    }
+
+    .reading-info .read-status-msg {
+        display: none;
+    }
+
+    .reading-info .read-status {
+        margin-top: 0 !important;
+        top: -2rem !important;
+        right: 0.3rem !important;
+    }
+
+    .add-form form p input {
+        width: 80vw !important;
+    }
+}
